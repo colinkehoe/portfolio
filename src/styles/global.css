@@ -847,6 +847,12 @@ footer {
   color: var(--c, var(--violet));
 }
 
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .detail-link-off {
   color: var(--ink-faint);
   border-bottom-color: transparent;

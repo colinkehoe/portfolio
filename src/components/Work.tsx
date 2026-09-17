@@ -51,13 +51,20 @@ function Detail({ p }: { p: Project }) {
           </span>
         ))}
       </div>
-      {p.url ? (
-        <a className="detail-link" href={p.url} target="_blank" rel="noopener noreferrer">
-          Read the code
-        </a>
-      ) : (
-        <p className="detail-link detail-link-off">No public repo yet</p>
-      )}
+      <div className="detail-links">
+        {p.url ? (
+          <a className="detail-link" href={p.url} target="_blank" rel="noopener noreferrer">
+            Read the code
+          </a>
+        ) : (
+          <p className="detail-link detail-link-off">No public repo yet</p>
+        )}
+        {p.demo && (
+          <a className="detail-link" href={import.meta.env.BASE_URL + p.demo}>
+            Open the demo
+          </a>
+        )}
+      </div>
     </div>
   );
 }

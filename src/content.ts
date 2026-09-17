@@ -39,6 +39,8 @@ export interface Project {
   accent: Accent;
   /** Leave "" for work with no public repo yet — renders unlinked. */
   url: string;
+  /** Optional live demo, relative to the site base. Omit for work without one. */
+  demo?: string;
   desc: string;
   tags: string[];
 }
@@ -81,7 +83,8 @@ export const PROJECTS: Project[] = [
     lang: "Python",
     status: "Building now",
     accent: "violet",
-    url: "",
+    url: "https://github.com/colinkehoe/automated-exoplanet-vetting",
+    demo: "exovet/",
     desc: "Most transit candidates are not planets — they're eclipsing binaries, background blends, or instrument systematics. This model reads survey photometry and predicts whether a signal is a real planet, then scores the survivors on the stellar and orbital properties that bear on habitability.",
     tags: ["Time series", "Imbalanced classification", "Astronomy data"],
   },
